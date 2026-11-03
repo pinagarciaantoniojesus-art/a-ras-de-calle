@@ -14,47 +14,26 @@
                 <span class="logo-badge">FÚTBOL SEVILLANO</span>
                 <span class="logo-title">A RAS DE CALLE</span>
             </div>
-          <nav class="nav-links">
-    <a href="index.html">Inicio</a>
-    
-    <!-- Menú desplegable por clic -->
-    <div class="dropdown">
-        <a href="javascript:void(0);" onclick="toggleDropdown(event)" style="cursor: pointer;">El Proyecto ▾</a>
-        <div class="dropdown-content" id="projectDropdown">
-            <a href="proyecto.html">Sobre el proyecto</a>
-            <a href="nosotros.html">Sobre nosotros</a>
-            <a href="contacto.html">Contacto</a>
-        </div>
-    </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Inicio</a>
+                
+                <!-- Menú desplegable por clic -->
+                <div class="dropdown">
+                    <a href="javascript:void(0);" onclick="toggleDropdown(event)" style="cursor: pointer;">El Proyecto ▾</a>
+                    <div class="dropdown-content" id="projectDropdown">
+                        <a href="proyecto.html">Sobre el proyecto</a>
+                        <a href="nosotros.html">Sobre nosotros</a>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                </div>
 
-    <a href="foro.html">Foro</a>
-    <a href="equipos.html">Equipos</a>
-    <a href="competiciones.html">Competiciones</a>
-    <a href="partido.html">Resultados</a>
-    <a href="noticias.html">Noticias</a>
-    <a href="estadisticas.html">Estadísticas</a>
-</nav>
-
-<!-- Script para controlar el clic -->
-<script>
-function toggleDropdown(event) {
-    event.stopPropagation();
-    document.getElementById("projectDropdown").classList.toggle("show");
-}
-
-// Cierra el menú si se hace clic en cualquier otra parte de la pantalla
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown > a')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
-</script>
+                <a href="foro.html">Foro</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="competiciones.html">Competiciones</a>
+                <a href="partido.html">Resultados</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="estadisticas.html">Estadísticas</a>
+            </nav>
             <div class="auth-buttons">
                 <button class="btn-login">Iniciar sesión</button>
                 <button class="btn-register">Registrarse</button>
@@ -64,7 +43,7 @@ window.onclick = function(event) {
 
     <main class="main-container">
         <!-- Banner Principal Azul -->
-        <div class="hero-card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-align: center;">
+        <div class="hero-card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
             <div style="max-width: 60%;">
                 <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">Portal Oficial</span>
                 <h1 style="font-size: 2.2rem; margin: 0.5rem 0; color: #ffffff;">El fútbol sevillano, desde dentro</h1>
@@ -85,7 +64,7 @@ window.onclick = function(event) {
             <div class="card" style="background: #fffdf5; border-top: 4px solid #d4af37; padding: 1.25rem;">
                 <h3 style="color: #0b1a30; font-size: 1.1rem; margin-top: 0; margin-bottom: 0.5rem;">📊 Estadísticas destacadas</h3>
                 <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Consulta clasificaciones, goleadores y datos de todas las categorías sevillanas.</p>
-                <a href="estadisticas.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Ver estadísticas completos &rarr;</a>
+                <a href="estadisticas.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Ver estadísticas completas &rarr;</a>
             </div>
 
             <div class="card" style="background: #fffdf5; border-top: 4px solid #d4af37; padding: 1.25rem;">
@@ -98,62 +77,29 @@ window.onclick = function(event) {
         <!-- Layout Central de 2 Columnas -->
         <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
             
-            <!-- Columna Izquierda: Noticia Principal -->
+            <!-- Columna Izquierda: Noticia Principal con Imagen -->
             <div>
                 <div class="card" style="padding: 0; overflow: hidden;">
-                    <div style="background: #0b1a30; height: 220px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 500;">
-                        <!-- Imagen destacada noticia -->
-                        <div style="text-align: center;">
-                            <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">⚽</span>
-                            <span>IMAGEN NOTICIA PRINCIPAL</span>
-                        </div>
+                    <div style="background: linear-gradient(180deg, rgba(11,31,59,0.3) 0%, rgba(11,31,59,0.85) 100%), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=80') center/cover no-repeat; height: 260px; display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                        <span style="background: #d4af37; color: #0b1a30; font-size: 0.75rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; position: absolute; top: 1rem; left: 1rem;">TERCERA RFEF - JORNADA 10</span>
                     </div>
                     <div style="padding: 1.5rem;">
-                        <span style="background: #0b1a30; color: #d4af37; font-size: 0.75rem; font-weight: bold; padding: 2px 8px; border-radius: 4px;">TERCERA RFEF</span>
-                        <h2 style="color: #0b1a30; font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">El Dos Hermanas CF 1971 afianza su liderato provincial en el Grupo X</h2>
-                        <p style="color: #475569; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Gran victoria del equipo nazareno ante su afición, consolidando un arranque de temporada impecable en la categoría tras un triunfo clave en el derbi regional.</p>
+                        <h2 style="color: #0b1a30; font-size: 1.4rem; margin: 0 0 0.5rem 0;">El Dos Hermanas CF 1971 afianza su liderato provincial en el Grupo X</h2>
+                        <p style="color: #475569; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">El conjunto nazareno suma una nueva victoria clave tras imponerse en un vibrante duelo por 4-3 al Real Betis C, consolidándose en lo más alto de la tabla y marcando el ritmo de la competición.</p>
                         <a href="noticias.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Leer crónica completa &rarr;</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Columna Derecha: Panel de Partidos y Resultados -->
+            <!-- Columna Derecha: Panel de Próximos Partidos (Jornada 10) -->
             <div>
                 <div class="card" style="padding: 1rem;">
-                    <div style="display: flex; border-bottom: 2px solid #e2e8f0; margin-bottom: 1rem;">
-                        <button style="flex: 1; padding: 0.5rem; background: none; border: none; border-bottom: 2px solid #0b1a30; font-weight: bold; color: #0b1a30; font-size: 0.85rem; cursor: pointer;">Próximos partidos</button>
-                        <button style="flex: 1; padding: 0.5rem; background: none; border: none; color: #64748b; font-size: 0.85rem; cursor: pointer;">Últimos resultados</button>
+                    <div style="background: #0b1a30; color: #d4af37; padding: 0.6rem 0.8rem; border-radius: 4px; font-weight: bold; font-size: 0.85rem; margin-bottom: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span>PRÓXIMOS PARTIDOS</span>
+                        <span style="font-size: 0.75rem; color: #ffffff;">JORNADA 10</span>
                     </div>
 
-                    <!-- Lista de Partidos Destacados -->
-                    <div style="font-size: 0.85rem;">
-                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 500;">Utrera vs San Roque</span>
-                            <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">Dom 17:00</span>
-                        </div>
-                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 500;">Sevilla C vs Pozoblanco</span>
-                            <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">Dom 11:30</span>
-                        </div>
-                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 500;">Real Betis C vs Tomares</span>
-                            <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">Sáb 16:30</span>
-                        </div>
-                        <div style="padding: 0.6rem 0; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 500;">Dos Hermanas vs Ceuta B</span>
-                            <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">Dom 12:00</span>
-                        </div>
-                    </div>
-
-                    <a href="partido.html" style="display: block; text-align: center; margin-top: 1rem; background: #0b1a30; color: #d4af37; padding: 0.5rem; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Ver calendario completo</a>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <footer class="footer" style="margin-top: 2rem;">
-        <p>El fútbol sevillano, desde dentro.</p>
-    </footer>
-</body>
-</html>
+                    <!-- Lista de Partidos Reales Jornada 10 -->
+                    <div style="font-size: 0.82rem;">
+                        <div style="padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                            <span style
