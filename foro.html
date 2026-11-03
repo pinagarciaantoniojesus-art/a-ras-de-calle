@@ -45,32 +45,32 @@
         <!-- Layout Central de 2 Columnas (Panel Lateral Izquierdo) -->
         <div style="display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; margin-top: 1rem;">
             
-            <!-- Columna Izquierda: Panel de Categorías -->
+            <!-- Columna Izquierda: Panel de Categorías con Enlaces -->
             <div>
                 <div class="card" style="padding: 1.25rem;">
                     <h3 style="color: #0b1a30; font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Categorías</h3>
                     <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; background: #e2e8f0; color: #0b1a30; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">
+                        <a href="foro.html" id="cat-todas" class="cat-link" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
                             <span>Todas las categorías</span>
                             <span style="font-size: 0.85rem;">842</span>
                         </a>
-                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                        <a href="foro.html?cat=tercera-rfef" id="cat-tercera-rfef" class="cat-link" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
                             <span>Tercera Federación</span>
                             <span style="font-size: 0.85rem; color: #64748b;">248</span>
                         </a>
-                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                        <a href="foro.html?cat=division-honor" id="cat-division-honor" class="cat-link" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
                             <span>División de Honor</span>
                             <span style="font-size: 0.85rem; color: #64748b;">176</span>
                         </a>
-                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                        <a href="foro.html?cat=primera-andaluza" id="cat-primera-andaluza" class="cat-link" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
                             <span>Primera Andaluza</span>
                             <span style="font-size: 0.85rem; color: #64748b;">142</span>
                         </a>
-                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                        <a href="foro.html?cat=segunda-andaluza" id="cat-segunda-andaluza" class="cat-link" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
                             <span>Segunda Andaluza</span>
                             <span style="font-size: 0.85rem; color: #64748b;">115</span>
                         </a>
-                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                        <a href="foro.html?cat=tercera-andaluza" id="cat-tercera-andaluza" class="cat-link" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
                             <span>Tercera Andaluza</span>
                             <span style="font-size: 0.85rem; color: #64748b;">161</span>
                         </a>
@@ -78,16 +78,19 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha: Foro de Debate y Lista de Hilos -->
+            <!-- Columna Derecha: Foro de Debate Dinámico -->
             <div>
                 <div class="card" style="padding: 1.5rem;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                        <h2 style="color: #0b1a30; font-size: 1.5rem; margin: 0;">Foro de Debate</h2>
+                        <div>
+                            <h2 style="color: #0b1a30; font-size: 1.5rem; margin: 0;" id="forum-title">Foro de Debate</h2>
+                            <span id="forum-subtitle" style="font-size: 0.85rem; color: #64748b;">Mostrando todos los temas activos</span>
+                        </div>
                         <button style="background: #d4af37; color: #0b1a30; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: bold; font-size: 0.9rem; cursor: pointer;">+ Nuevo tema</button>
                     </div>
 
-                    <!-- Hilo 1 -->
-                    <div style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                    <!-- Hilo 1: Tercera RFEF -->
+                    <div class="thread-item" data-cat="tercera-rfef" style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
                         <div style="display: flex; align-items: center; gap: 1rem;">
                             <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">2</div>
                             <div>
@@ -98,28 +101,64 @@
                         <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">145 respuestas</span>
                     </div>
 
-                    <!-- Hilo 2 -->
-                    <div style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                    <!-- Hilo 2: Tercera RFEF -->
+                    <div class="thread-item" data-cat="tercera-rfef" style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
                         <div style="display: flex; align-items: center; gap: 1rem;">
                             <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">E</div>
                             <div>
-                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">El Écija puede dar la sorpresa este año</a></h4>
+                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">El Écija puede dar la sorpresa este año en la categoría</a></h4>
                                 <span style="font-size: 0.8rem; color: #64748b;">por <strong>sevillista99</strong> • Tercera RFEF</span>
                             </div>
                         </div>
                         <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">89 respuestas</span>
                     </div>
 
-                    <!-- Hilo 3 -->
-                    <div style="padding: 1rem 0; display: flex; justify-content: space-between; align-items: center;">
+                    <!-- Hilo 3: División de Honor -->
+                    <div class="thread-item" data-cat="division-honor" style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
                         <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">F</div>
+                            <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">D</div>
                             <div>
-                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">Fichaje del Sevilla C, ¿acierto o error?</a></h4>
-                                <span style="font-size: 0.8rem; color: #64748b;">por <strong>fran68</strong> • Segunda RFEF</span>
+                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">Análisis de la lucha por el ascenso en División de Honor Senior</a></h4>
+                                <span style="font-size: 0.8rem; color: #64748b;">por <strong>dh_fan</strong> • División de Honor</span>
                             </div>
                         </div>
-                        <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">67 respuestas</span>
+                        <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">42 respuestas</span>
+                    </div>
+
+                    <!-- Hilo 4: Primera Andaluza -->
+                    <div class="thread-item" data-cat="primera-andaluza" style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">P</div>
+                            <div>
+                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">Resultados y sorpresas en la jornada de Primera Andaluza Sevilla</a></h4>
+                                <span style="font-size: 0.8rem; color: #64748b;">por <strong>provincial_sev</strong> • Primera Andaluza</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">31 respuestas</span>
+                    </div>
+
+                    <!-- Hilo 5: Segunda Andaluza -->
+                    <div class="thread-item" data-cat="segunda-andaluza" style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">S</div>
+                            <div>
+                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">¿Qué equipos se perfilan como favoritos en Segunda Andaluza?</a></h4>
+                                <span style="font-size: 0.8rem; color: #64748b;">por <strong>aljarafe_futbol</strong> • Segunda Andaluza</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">19 respuestas</span>
+                    </div>
+
+                    <!-- Hilo 6: Tercera Andaluza -->
+                    <div class="thread-item" data-cat="tercera-andaluza" style="padding: 1rem 0; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">T</div>
+                            <div>
+                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">Debate sobre el nivel del fútbol base y modesto en Tercera Andaluza</a></h4>
+                                <span style="font-size: 0.8rem; color: #64748b;">por <strong>cantera_sevillana</strong> • Tercera Andaluza</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">25 respuestas</span>
                     </div>
 
                 </div>
@@ -132,7 +171,7 @@
         <p>El fútbol sevillano, desde dentro.</p>
     </footer>
 
-    <!-- Script para el menú desplegable -->
+    <!-- Scripts para el menú desplegable y filtro de categorías del foro -->
     <script>
     function toggleDropdown(event) {
         event.stopPropagation();
@@ -150,6 +189,54 @@
             }
         }
     }
+
+    // Lógica para filtrar hilos según la categoría seleccionada
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('cat');
+        
+        const catMap = {
+            'tercera-rfef': { title: 'Foro: Tercera Federación', name: 'Tercera Federación', id: 'cat-tercera-rfef' },
+            'division-honor': { title: 'Foro: División de Honor Senior', name: 'División de Honor', id: 'cat-division-honor' },
+            'primera-andaluza': { title: 'Foro: Primera Andaluza (Sevilla)', name: 'Primera Andaluza', id: 'cat-primera-andaluza' },
+            'segunda-andaluza': { title: 'Foro: Segunda Andaluza (Sevilla)', name: 'Segunda Andaluza', id: 'cat-segunda-andaluza' },
+            'tercera-andaluza': { title: 'Foro: Tercera Andaluza (Sevilla)', name: 'Tercera Andaluza', id: 'cat-tercera-andaluza' }
+        };
+
+        const threads = document.querySelectorAll('.thread-item');
+        const titleEl = document.getElementById('forum-title');
+        const subtitleEl = document.getElementById('forum-subtitle');
+
+        if (category && catMap[category]) {
+            // Marcar categoría activa
+            document.getElementById(catMap[category].id).style.background = '#e2e8f0';
+            document.getElementById(catMap[category].id).style.fontWeight = 'bold';
+            document.getElementById(catMap[category].id).style.color = '#0b1a30';
+
+            // Actualizar títulos
+            titleEl.textContent = catMap[category].title;
+            subtitleEl.textContent = `Temas de debate de ${catMap[category].name}`;
+
+            // Filtrar hilos
+            threads.forEach(thread => {
+                if (thread.getAttribute('data-cat') === category) {
+                    thread.style.display = 'flex';
+                } else {
+                    thread.style.display = 'none';
+                }
+            });
+        } else {
+            // "Todas las categorías" por defecto
+            const defaultCat = document.getElementById('cat-todas');
+            defaultCat.style.background = '#e2e8f0';
+            defaultCat.style.fontWeight = 'bold';
+            defaultCat.style.color = '#0b1a30';
+
+            threads.forEach(thread => {
+                thread.style.display = 'flex';
+            });
+        }
+    });
     </script>
 </body>
 </html>
