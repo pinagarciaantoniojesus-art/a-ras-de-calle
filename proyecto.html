@@ -7,16 +7,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- (Mantén aquí el header común con el menú actualizado) -->
-    
+    <!-- Encabezado / Menú Navegación -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <span class="logo-badge">FÚTBOL SEVILLANO</span>
+                <span class="logo-title">A RAS DE CALLE</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                
+                <!-- Menú desplegable por clic -->
+                <div class="dropdown">
+                    <a href="javascript:void(0);" onclick="toggleDropdown(event)" style="cursor: pointer;" class="active">El Proyecto ▾</a>
+                    <div class="dropdown-content" id="projectDropdown">
+                        <a href="proyecto.html">Sobre el proyecto</a>
+                        <a href="nosotros.html">Sobre nosotros</a>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+
+                <a href="foro.html">Foro</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="competiciones.html">Competiciones</a>
+                <a href="partido.html">Resultados</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="estadisticas.html">Estadísticas</a>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn-login">Iniciar sesión</button>
+                <button class="btn-register">Registrarse</button>
+            </div>
+        </div>
+    </header>
+
     <main class="main-container">
-        <div class="card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 1.5rem;">
+        <div class="card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 1.5rem; margin-bottom: 1.5rem;">
             <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">FILOSOFÍA Y OBJETIVOS</span>
             <h2 style="font-size: 1.8rem; margin: 0.5rem 0; color: #ffffff;">Sobre el Proyecto</h2>
         </div>
 
-        <div class="card" style="margin-top: 1.5rem; line-height: 1.6; color: #334155;">
-            <h3 style="color: #0b1a30;">¿Qué es A Ras de Calle?</h3>
+        <div class="card" style="padding: 1.5rem; line-height: 1.6; color: #334155;">
+            <h3 style="color: #0b1a30; margin-top: 0;">¿Qué es A Ras de Calle?</h3>
             <p><strong>A Ras de Calle</strong> nace con el firme propósito de dar visibilidad al fútbol sevillano más cercano, el que se vive en los campos de barrio, en los municipios de la provincia y en las categorías modestas donde late la verdadera pasión por este deporte.</p>
             
             <h3 style="color: #0b1a30; margin-top: 1.5rem;">Nuestra Misión</h3>
@@ -24,6 +56,23 @@
         </div>
     </main>
 
-    <footer class="footer"><p>El fútbol sevillano, desde dentro.</p></footer>
+    <footer class="footer" style="margin-top: 2rem;"><p>El fútbol sevillano, desde dentro.</p></footer>
+
+    <!-- Script para el menú desplegable -->
+    <script>
+    function toggleDropdown(event) {
+        event.stopPropagation();
+        document.getElementById("projectDropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown > a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) { openDropdown.classList.remove('show'); }
+            }
+        }
+    }
+    </script>
 </body>
 </html>
