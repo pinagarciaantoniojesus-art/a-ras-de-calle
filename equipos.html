@@ -41,27 +41,73 @@
     </header>
 
     <main class="main-container">
-        <div class="card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 1.5rem;">
+        <!-- Cabecera -->
+        <div class="card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 1.5rem; margin-bottom: 1.5rem;">
             <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">DIRECTORIO DE CLUBES</span>
             <h2 style="font-size: 1.8rem; margin: 0.5rem 0; color: #ffffff;">Equipos Sevillanos</h2>
             <p style="font-size: 0.85rem; color: #cbd5e1;">Conoce los clubes que conforman el mapa futbolístico de nuestra provincia.</p>
         </div>
-        <!-- Contenido de equipos -->
+
+        <!-- Listado de Equipos Destacados -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            
+            <!-- CD Utrera -->
+            <div class="card" style="border-top: 4px solid #d4af37;">
+                <h3 style="color: #0b1a30; font-size: 1.2rem; margin-top: 0;">CD Utrera</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Estadio San Juan Bosco • Tercera Federación (Grupo X)</p>
+                <a href="partido.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Ver resultados y partidos &rarr;</a>
+            </div>
+
+            <!-- Dos Hermanas CF 1971 -->
+            <div class="card" style="border-top: 4px solid #d4af37;">
+                <h3 style="color: #0b1a30; font-size: 1.2rem; margin-top: 0;">Dos Hermanas CF 1971</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Estadio Miguel Román • Tercera Federación (Grupo X)</p>
+                <a href="partido.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Ver resultados y partidos &rarr;</a>
+            </div>
+
+            <!-- Sevilla FC C -->
+            <div class="card" style="border-top: 4px solid #d4af37;">
+                <h3 style="color: #0b1a30; font-size: 1.2rem; margin-top: 0;">Sevilla FC C</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Ciudad Deportiva José Ramón Cisneros • Tercera Federación (Grupo X)</p>
+                <a href="partido.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Ver resultados y partidos &rarr;</a>
+            </div>
+
+            <!-- Real Betis C -->
+            <div class="card" style="border-top: 4px solid #d4af37;">
+                <h3 style="color: #0b1a30; font-size: 1.2rem; margin-top: 0;">Real Betis C</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Luis del Sol • Tercera Federación (Grupo X)</p>
+                <a href="partido.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Ver resultados y partidos &rarr;</a>
+            </div>
+
+            <!-- UD Tomares -->
+            <div class="card" style="border-top: 4px solid #d4af37;">
+                <h3 style="color: #0b1a30; font-size: 1.2rem; margin-top: 0;">UD Tomares</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Municipal San Sebastián • Tercera Federación (Grupo X)</p>
+                <a href="partido.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Ver resultados y partidos &rarr;</a>
+            </div>
+
+        </div>
     </main>
 
-    <footer class="footer"><p>El fútbol sevillano, desde dentro.</p></footer>
+    <footer class="footer" style="margin-top: 2rem;">
+        <p>El fútbol sevillano, desde dentro.</p>
+    </footer>
 
+    <!-- Script para el menú desplegable -->
     <script>
     function toggleDropdown(event) {
         event.stopPropagation();
         document.getElementById("projectDropdown").classList.toggle("show");
     }
+
     window.onclick = function(event) {
         if (!event.target.matches('.dropdown > a')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             for (var i = 0; i < dropdowns.length; i++) {
                 var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) { openDropdown.classList.remove('show'); }
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
             }
         }
     }
