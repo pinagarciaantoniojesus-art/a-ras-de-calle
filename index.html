@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Ras de Calle - El Fútbol Sevillano Desde Dentro</title>
+    <title>A Ras de Calle - El fútbol sevillano, desde dentro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barra de navegación superior -->
+    <!-- Encabezado / Menú Navegación -->
     <header class="header">
         <div class="nav-container">
             <div class="logo-area">
                 <span class="logo-badge">FÚTBOL SEVILLANO</span>
                 <span class="logo-title">A RAS DE CALLE</span>
             </div>
-  <nav class="nav-links">
-                <a href="index.html">Inicio</a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Inicio</a>
                 <a href="foro.html">Foro</a>
                 <a href="equipos.html">Equipos</a>
                 <a href="competiciones.html">Competiciones</a>
@@ -30,81 +30,98 @@
         </div>
     </header>
 
-    <!-- Hero / Banner Principal -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>EL FÚTBOL SEVILLANO,<br>DESDE DENTRO</h1>
-            <p>Noticias, resultados, equipos y la mejor comunidad de aficionados del fútbol provincial de Sevilla.</p>
-            <a href="#foro" class="btn-gold">Entrar al foro &rarr;</a>
-        </div>
-    </section>
-
-    <!-- Contenido Principal -->
     <main class="main-container">
-        <div class="content-grid">
-            <!-- Columna Izquierda: Noticias y Partidos -->
-            <div class="feed-column">
-                <!-- Sección Últimas Noticias -->
-                <section class="card">
-                    <div class="card-header">
-                        <h2>Últimas noticias</h2>
-                        <a href="#" class="ver-mas">Ver todas &rarr;</a>
-                    </div>
-                    <ul class="news-list">
-                        <li>
-                            <span class="categoria">Tercera RFEF · 18 oct. 2025</span>
-                            <a href="#">El San Roque afronta un nuevo reto en casa</a>
-                        </li>
-                        <li>
-                            <span class="categoria">Tercera RFEF · 17 oct. 2025</span>
-                            <a href="#">El Écija suma un punto en un partido muy disputado</a>
-                        </li>
-                        <li>
-                            <span class="categoria">Primera Andaluza · 16 oct. 2025</span>
-                            <a href="#">El mejor ambiente en la grada del Estadio de la Juventud</a>
-                        </li>
-                    </ul>
-                </section>
+        <!-- Banner Principal Azul -->
+        <div class="hero-card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-align: center;">
+            <div style="max-width: 60%;">
+                <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">Portal Oficial</span>
+                <h1 style="font-size: 2.2rem; margin: 0.5rem 0; color: #ffffff;">El fútbol sevillano, desde dentro</h1>
+                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1.5rem;">Sigue a tu equipo, debate en la comunidad y mantente al día con todas las categorías de la provincia de Sevilla.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="foro.html" style="background: #d4af37; color: #0b1a30; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.9rem;">Ir al foro</a>
+                    <a href="partido.html" style="background: rgba(255,255,255,0.1); color: #ffffff; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2);">Ver partidos</a>
+                </div>
+            </div>
+            <div style="background: rgba(212,175,55,0.1); border: 1px dashed #d4af37; padding: 1.5rem; border-radius: 8px; text-align: center; width: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <span style="font-size: 2.5rem; font-weight: bold; color: #d4af37;">3ª RFEF</span>
+                <span style="font-size: 0.85rem; color: #ffffff; font-weight: 500;">GRUPO X (SEVILLA)</span>
+            </div>
+        </div>
 
-                <!-- Sección Próximos Partidos -->
-                <section class="card">
-                    <div class="card-header">
-                        <h2>Próximos partidos</h2>
-                        <a href="#" class="ver-mas">Ver todos &rarr;</a>
-                    </div>
-                    <div class="match-row">
-                        <span class="team-name">Sanluqueño</span>
-                        <span class="match-info">12:00 <br><small>Jornada 8</small></span>
-                        <span class="team-name">Xerez CD</span>
-                    </div>
-                    <div class="match-row">
-                        <span class="team-name">Écija</span>
-                        <span class="match-info">17:00 <br><small>Jornada 8</small></span>
-                        <span class="team-name">Utrera</span>
-                    </div>
-                </section>
+        <!-- Bloques en Dorado: Estadísticas y Foro -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="card" style="background: #fffdf5; border-top: 4px solid #d4af37; padding: 1.25rem;">
+                <h3 style="color: #0b1a30; font-size: 1.1rem; margin-top: 0; margin-bottom: 0.5rem;">📊 Estadísticas destacadas</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Consulta clasificaciones, goleadores y datos de todas las categorías sevillanas.</p>
+                <a href="estadisticas.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Ver estadísticas completos &rarr;</a>
             </div>
 
-            <!-- Columna Derecha: Reportaje / Destacado -->
-            <aside class="sidebar-column">
-                <div class="card promo-card">
-                    <span class="badge-reportaje">REPORTAJE</span>
-                    <h3>La pasión del fútbol local</h3>
-                    <p>Historias, clubes y personas que hacen grande el fútbol sevillano.</p>
-                    <a href="#" class="btn-leer">Leer más &rarr;</a>
+            <div class="card" style="background: #fffdf5; border-top: 4px solid #d4af37; padding: 1.25rem;">
+                <h3 style="color: #0b1a30; font-size: 1.1rem; margin-top: 0; margin-bottom: 0.5rem;">💬 Debates del Foro</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">Únete a la conversación sobre los fichajes, árbitros y crónicas de la jornada.</p>
+                <a href="foro.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Entrar a la comunidad &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Layout Central de 2 Columnas -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+            
+            <!-- Columna Izquierda: Noticia Principal -->
+            <div>
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <div style="background: #0b1a30; height: 220px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 500;">
+                        <!-- Imagen destacada noticia -->
+                        <div style="text-align: center;">
+                            <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">⚽</span>
+                            <span>IMAGEN NOTICIA PRINCIPAL</span>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <span style="background: #0b1a30; color: #d4af37; font-size: 0.75rem; font-weight: bold; padding: 2px 8px; border-radius: 4px;">TERCERA RFEF</span>
+                        <h2 style="color: #0b1a30; font-size: 1.4rem; margin: 0.75rem 0 0.5rem 0;">El Dos Hermanas CF 1971 afianza su liderato provincial en el Grupo X</h2>
+                        <p style="color: #475569; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Gran victoria del equipo nazareno ante su afición, consolidando un arranque de temporada impecable en la categoría tras un triunfo clave en el derbi regional.</p>
+                        <a href="noticias.html" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Leer crónica completa &rarr;</a>
+                    </div>
                 </div>
-            </aside>
+            </div>
+
+            <!-- Columna Derecha: Panel de Partidos y Resultados -->
+            <div>
+                <div class="card" style="padding: 1rem;">
+                    <div style="display: flex; border-bottom: 2px solid #e2e8f0; margin-bottom: 1rem;">
+                        <button style="flex: 1; padding: 0.5rem; background: none; border: none; border-bottom: 2px solid #0b1a30; font-weight: bold; color: #0b1a30; font-size: 0.85rem; cursor: pointer;">Próximos partidos</button>
+                        <button style="flex: 1; padding: 0.5rem; background: none; border: none; color: #64748b; font-size: 0.85rem; cursor: pointer;">Últimos resultados</button>
+                    </div>
+
+                    <!-- Lista de Partidos Destacados -->
+                    <div style="font-size: 0.85rem;">
+                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 500;">Utrera vs San Roque</span>
+                            <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">Dom 17:00</span>
+                        </div>
+                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 500;">Sevilla C vs Pozoblanco</span>
+                            <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">Dom 11:30</span>
+                        </div>
+                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 500;">Real Betis C vs Tomares</span>
+                            <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">Sáb 16:30</span>
+                        </div>
+                        <div style="padding: 0.6rem 0; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 500;">Dos Hermanas vs Ceuta B</span>
+                            <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">Dom 12:00</span>
+                        </div>
+                    </div>
+
+                    <a href="partido.html" style="display: block; text-align: center; margin-top: 1rem; background: #0b1a30; color: #d4af37; padding: 0.5rem; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Ver calendario completo</a>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <!-- Pie de página -->
-    <footer class="footer">
+    <footer class="footer" style="margin-top: 2rem;">
         <p>El fútbol sevillano, desde dentro.</p>
-        <div class="footer-links">
-            <a href="#">Aviso legal</a>
-            <a href="#">Privacidad</a>
-            <a href="#">Contacto</a>
-        </div>
     </footer>
 </body>
 </html>
