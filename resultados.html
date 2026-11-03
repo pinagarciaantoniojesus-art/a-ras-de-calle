@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Ras de Calle - Sanluqueño vs Xerez CD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <span class="logo-badge">FÚTBOL SEVILLANO</span>
+                <span class="logo-title">A RAS DE CALLE</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="foro.html">Foro</a>
+                <a href="#">Equipos</a>
+                <a href="#">Competiciones</a>
+                <a href="partido.html" class="active">Resultados</a>
+                <a href="#">Noticias</a>
+                <a href="#">Estadísticas</a>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn-login">Iniciar sesión</button>
+                <button class="btn-register">Registrarse</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Marcador Principal -->
+        <section class="card match-header-card">
+            <span class="league-tag">Tercera RFEF · Jornada 8</span>
+            <div class="match-scoreboard">
+                <div class="team-block">
+                    <div class="shield-placeholder">🛡️</div>
+                    <h2>Sanluqueño</h2>
+                </div>
+                <div class="score-block">
+                    <span class="score">2 - 1</span>
+                    <span class="status">Finalizado</span>
+                </div>
+                <div class="team-block">
+                    <div class="shield-placeholder">🛡️</div>
+                    <h2>Xerez CD</h2>
+                </div>
+            </div>
+
+            <!-- Pestañas de Navegación del Partido -->
+            <div class="match-tabs">
+                <button class="tab-btn active">Resumen</button>
+                <button class="tab-btn">Alineaciones</button>
+                <button class="tab-btn">Estadísticas</button>
+                <button class="tab-btn">Comentarios</button>
+            </div>
+        </section>
+
+        <!-- Estadísticas del Partido -->
+        <section class="card stats-card">
+            <h3>Estadísticas del encuentro</h3>
+            
+            <div class="stat-row">
+                <span class="stat-val">68%</span>
+                <span class="stat-label">Posesión</span>
+                <span class="stat-val">32%</span>
+            </div>
+            <div class="bar-container">
+                <div class="bar-left" style="width: 68%;"></div>
+                <div class="bar-right" style="width: 32%;"></div>
+            </div>
+
+            <div class="stat-row">
+                <span class="stat-val">12</span>
+                <span class="stat-label">Tiros</span>
+                <span class="stat-val">6</span>
+            </div>
+            
+            <div class="stat-row">
+                <span class="stat-val">5</span>
+                <span class="stat-label">Tiros a puerta</span>
+                <span class="stat-val">3</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>El fútbol sevillano, desde dentro.</p>
+    </footer>
+</body>
+</html>
