@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Ras de Calle - Clasificación y Estadísticas</title>
+    <title>A Ras de Calle - Estadísticas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Encabezado / Menú Navegación -->
     <header class="header">
         <div class="nav-container">
             <div class="logo-area">
@@ -15,6 +16,17 @@
             </div>
             <nav class="nav-links">
                 <a href="index.html">Inicio</a>
+                
+                <!-- Menú desplegable por clic -->
+                <div class="dropdown">
+                    <a href="javascript:void(0);" onclick="toggleDropdown(event)" style="cursor: pointer;">El Proyecto ▾</a>
+                    <div class="dropdown-content" id="projectDropdown">
+                        <a href="proyecto.html">Sobre el proyecto</a>
+                        <a href="nosotros.html">Sobre nosotros</a>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+
                 <a href="foro.html">Foro</a>
                 <a href="equipos.html">Equipos</a>
                 <a href="competiciones.html">Competiciones</a>
@@ -30,177 +42,48 @@
     </header>
 
     <main class="main-container">
-        <!-- Cabecera -->
-        <div class="card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 1.5rem;">
-            <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">TERCERA FEDERACIÓN - GRUPO X (2026/2027)</span>
-            <h2 style="font-size: 1.8rem; margin: 0.5rem 0; color: #ffffff;">Clasificación - Jornada 9</h2>
-            <p style="font-size: 0.85rem; color: #cbd5e1;">Tabla oficial actualizada con los 18 equipos del grupo.</p>
+        <!-- Banner Cabecera -->
+        <div class="card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">DATOS Y CLASIFICACIONES</span>
+            <h2 style="font-size: 1.8rem; margin: 0.5rem 0; color: #ffffff;">Estadísticas</h2>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">Análisis detallado de la temporada en el Grupo X de Tercera Federación.</p>
         </div>
 
-        <!-- Tabla de Clasificación Oficial -->
-        <div class="card" style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
-                <thead>
-                    <tr style="background-color: #0b1a30; color: #ffffff; border-bottom: 2px solid #d4af37;">
-                        <th style="padding: 0.75rem; text-align: center; width: 50px;">Pos</th>
-                        <th style="padding: 0.75rem;">Equipo</th>
-                        <th style="padding: 0.75rem; text-align: center;">J</th>
-                        <th style="padding: 0.75rem; text-align: center;">DG</th>
-                        <th style="padding: 0.75rem; text-align: center; color: #d4af37;">Pts</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- 1 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0; background-color: rgba(212, 175, 55, 0.08);">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">1</td>
-                        <td style="padding: 0.75rem; font-weight: bold; color: #0b1a30;">Dos Hermanas 1971 <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 6px; border-radius: 4px; margin-left: 5px;">SEV</span></td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">+14</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">22</td>
-                    </tr>
-                    <!-- 2 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">2</td>
-                        <td style="padding: 0.75rem; color: #334155;">RC Portuense</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">+9</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">19</td>
-                    </tr>
-                    <!-- 3 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">3</td>
-                        <td style="padding: 0.75rem; color: #334155;">San Roque de Lepe</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">+5</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">17</td>
-                    </tr>
-                    <!-- 4 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0; background-color: rgba(212, 175, 55, 0.08);">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">4</td>
-                        <td style="padding: 0.75rem; font-weight: bold; color: #0b1a30;">UD Tomares <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 6px; border-radius: 4px; margin-left: 5px;">SEV</span></td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">+3</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">17</td>
-                    </tr>
-                    <!-- 5 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">5</td>
-                        <td style="padding: 0.75rem; color: #334155;">Xerez Deportivo</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">+2</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">17</td>
-                    </tr>
-                    <!-- 6 - Utrera -->
-                    <tr style="border-bottom: 1px solid #e2e8f0; background-color: rgba(212, 175, 55, 0.18);">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">6</td>
-                        <td style="padding: 0.75rem; font-weight: bold; color: #0b1a30;">Utrera <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 6px; border-radius: 4px; margin-left: 5px;">SEV</span></td>
-                        <td style="padding: 0.75rem; text-align: center;">8</td>
-                        <td style="padding: 0.75rem; text-align: center;">-1</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">15</td>
-                    </tr>
-                    <!-- 7 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0; background-color: rgba(212, 175, 55, 0.08);">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">7</td>
-                        <td style="padding: 0.75rem; font-weight: bold; color: #0b1a30;">Real Betis C <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 6px; border-radius: 4px; margin-left: 5px;">SEV</span></td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">+4</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">14</td>
-                    </tr>
-                    <!-- 8 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">8</td>
-                        <td style="padding: 0.75rem; color: #334155;">CD Pozoblanco</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">+2</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">12</td>
-                    </tr>
-                    <!-- 9 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">9</td>
-                        <td style="padding: 0.75rem; color: #334155;">AD Ceuta FC B</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">-1</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">12</td>
-                    </tr>
-                    <!-- 10 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">10</td>
-                        <td style="padding: 0.75rem; color: #334155;">Egabrense</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">+0</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">11</td>
-                    </tr>
-                    <!-- 11 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">11</td>
-                        <td style="padding: 0.75rem; color: #334155;">Conil</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">-5</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">11</td>
-                    </tr>
-                    <!-- 12 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">12</td>
-                        <td style="padding: 0.75rem; color: #334155;">RB Linense</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">-2</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">9</td>
-                    </tr>
-                    <!-- 13 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">13</td>
-                        <td style="padding: 0.75rem; color: #334155;">Chiclana CF</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">-4</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">9</td>
-                    </tr>
-                    <!-- 14 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">14</td>
-                        <td style="padding: 0.75rem; color: #334155;">Cádiz CF Mirandilla</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">-1</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">8</td>
-                    </tr>
-                    <!-- 15 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">15</td>
-                        <td style="padding: 0.75rem; color: #334155;">Atlético Onubense</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">-7</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">8</td>
-                    </tr>
-                    <!-- 16 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0; background-color: rgba(212, 175, 55, 0.08);">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">16</td>
-                        <td style="padding: 0.75rem; font-weight: bold; color: #0b1a30;">Sevilla C <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 6px; border-radius: 4px; margin-left: 5px;">SEV</span></td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">-7</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">7</td>
-                    </tr>
-                    <!-- 17 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">17</td>
-                        <td style="padding: 0.75rem; color: #334155;">Bollullos CF</td>
-                        <td style="padding: 0.75rem; text-align: center;">9</td>
-                        <td style="padding: 0.75rem; text-align: center;">-4</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">6</td>
-                    </tr>
-                    <!-- 18 -->
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold;">18</td>
-                        <td style="padding: 0.75rem; color: #334155;">Córdoba CF B</td>
-                        <td style="padding: 0.75rem; text-align: center;">8</td>
-                        <td style="padding: 0.75rem; text-align: center;">-7</td>
-                        <td style="padding: 0.75rem; text-align: center; font-weight: bold; color: #0b1a30;">4</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Contenido Estadísticas -->
+        <div class="card" style="padding: 1.5rem;">
+            <h3 style="color: #0b1a30; font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Resumen de rendimiento provincial</h3>
+            <p style="font-size: 0.9rem; color: #475569; line-height: 1.5; margin-bottom: 1.5rem;">
+                Consulta próximamente las tablas de goleadores, porteros menos goleados y la clasificación general interactiva actualizada jornada a jornada tras cada encuentro disputado por los equipos sevillanos.
+            </p>
+            <div style="background: #fffdf5; border-left: 4px solid #d4af37; padding: 1rem; border-radius: 4px;">
+                <span style="font-size: 0.85rem; font-weight: bold; color: #0b1a30;">Sección en evolución constante</span>
+                <p style="font-size: 0.85rem; color: #64748b; margin: 0.3rem 0 0 0;">Los datos estadísticos se sincronizan directamente con las actas oficiales de la competición.</p>
+            </div>
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" style="margin-top: 2rem;">
         <p>El fútbol sevillano, desde dentro.</p>
     </footer>
+
+    <!-- Script para el menú desplegable -->
+    <script>
+    function toggleDropdown(event) {
+        event.stopPropagation();
+        document.getElementById("projectDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown > a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    </script>
 </body>
 </html>
