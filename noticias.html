@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Ras de Calle - Competiciones</title>
+    <title>A Ras de Calle - Tablón de Noticias</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Encabezado / Menú Navegación -->
     <header class="header">
         <div class="nav-container">
             <div class="logo-area">
@@ -15,11 +16,22 @@
             </div>
             <nav class="nav-links">
                 <a href="index.html">Inicio</a>
+                
+                <!-- Menú desplegable por clic -->
+                <div class="dropdown">
+                    <a href="javascript:void(0);" onclick="toggleDropdown(event)" style="cursor: pointer;">El Proyecto ▾</a>
+                    <div class="dropdown-content" id="projectDropdown">
+                        <a href="proyecto.html">Sobre el proyecto</a>
+                        <a href="nosotros.html">Sobre nosotros</a>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+
                 <a href="foro.html">Foro</a>
                 <a href="equipos.html">Equipos</a>
-                <a href="competiciones.html" class="active">Competiciones</a>
+                <a href="competiciones.html">Competiciones</a>
                 <a href="partido.html">Resultados</a>
-                <a href="#">Noticias</a>
+                <a href="noticias.html" class="active">Noticias</a>
                 <a href="estadisticas.html">Estadísticas</a>
             </nav>
             <div class="auth-buttons">
@@ -30,94 +42,107 @@
     </header>
 
     <main class="main-container">
-        <!-- Cabecera -->
-        <div class="card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 1.5rem;">
-            <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">MAPA DE CATEGORÍAS</span>
-            <h2 style="font-size: 1.8rem; margin: 0.5rem 0; color: #ffffff;">Competiciones</h2>
-            <p style="font-size: 0.85rem; color: #cbd5e1;">Seguimiento oficial de categorías nacionales y territorial sevillana.</p>
+        <!-- Banner Cabecera -->
+        <div class="card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; text-align: center; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">ACTUALIDAD PROVINCIAL</span>
+            <h2 style="font-size: 1.8rem; margin: 0.5rem 0; color: #ffffff;">Tablón de Noticias</h2>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">La última hora de los equipos sevillanos en competición.</p>
         </div>
 
-        <!-- Grid de Competiciones -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        <!-- Grid de Noticias por Equipo -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
             
-            <!-- Tercera Federación -->
-            <div class="card" style="border-top: 4px solid #d4af37;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3 style="color: #0b1a30; font-size: 1.25rem; margin: 0;">Tercera Federación</h3>
-                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">GRUPO X</span>
+            <!-- Sevilla FC C -->
+            <div class="card" style="border-top: 4px solid #0b1a30;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">SEVILLA FC C</span>
+                    <span style="font-size: 0.75rem; color: #64748b;">Tercera RFEF</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;">Categoría nacional completa. Incluye a todos los equipos andaluces y ceutíes de la categoría.</p>
-                <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: #334155; margin-bottom: 1.25rem;">
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Ámbito:</strong> Nacional (Andalucía Occidental y Ceuta)</li>
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Cobertura:</strong> Grupo X al completo</li>
-                </ul>
-                <div style="display: flex; gap: 0.5rem;">
-                    <a href="estadisticas.html" style="flex: 1; background: #0b1a30; color: #d4af37; padding: 0.5rem; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-align: center;">Clasificación</a>
-                    <a href="partido.html" style="flex: 1; background: #f1f5f9; color: #0b1a30; padding: 0.5rem; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-align: center; border: 1px solid #cbd5e1;">Resultados</a>
-                </div>
+                <h3 style="color: #0b1a30; font-size: 1.15rem; margin: 0.5rem 0;">Repesca clave para asegurar la plaza en el Grupo X</h3>
+                <p style="font-size: 0.9rem; color: #475569; line-height: 1.4; margin-bottom: 1rem;">El segundo filial sevillista quedó encuadrado de forma definitiva en el grupo andaluz tras cubrir una vacante estival crucial para la planificación de la cantera.</p>
+                <a href="#" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Leer noticia completa &rarr;</a>
             </div>
 
-            <!-- División de Honor Senior -->
-            <div class="card" style="border-top: 4px solid #d4af37;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3 style="color: #0b1a30; font-size: 1.25rem; margin: 0;">División de Honor Senior</h3>
-                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">NACIONAL / TERRITORIAL</span>
+            <!-- Real Betis C -->
+            <div class="card" style="border-top: 4px solid #0b1a30;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">REAL BETIS C</span>
+                    <span style="font-size: 0.75rem; color: #64748b;">Tercera RFEF</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;">La máxima categoría territorial andaluza en su totalidad.</p>
-                <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: #334155; margin-bottom: 1.25rem;">
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Ámbito:</strong> Autonómico (Grupos andaluces)</li>
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Cobertura:</strong> Todos los grupos</li>
-                </ul>
-                <a href="#" style="display: inline-block; background: #0b1a30; color: #d4af37; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; width: 100%;">Ver Competición</a>
+                <h3 style="color: #0b1a30; font-size: 1.15rem; margin: 0.5rem 0;">Intensidad ofensiva en el arranque liguero</h3>
+                <p style="font-size: 0.9rem; color: #475569; line-height: 1.4; margin-bottom: 1rem;">El segundo filial verdiblanco destaca por partidos de altísimo voltaje ofensivo, como el vibrante 4-3 cosechado en los primeros compases del campeonato.</p>
+                <a href="#" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Leer noticia completa &rarr;</a>
             </div>
 
-            <!-- Primera Andaluza -->
-            <div class="card" style="border-top: 4px solid #d4af37;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3 style="color: #0b1a30; font-size: 1.25rem; margin: 0;">Primera Andaluza</h3>
-                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">GRUPOS SEVILLA</span>
+            <!-- CD Utrera -->
+            <div class="card" style="border-top: 4px solid #0b1a30;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">CD UTRERA</span>
+                    <span style="font-size: 0.75rem; color: #64748b;">Tercera RFEF</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;">Seguimiento pormenorizado de los grupos que componen la categoría en la provincia.</p>
-                <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: #334155; margin-bottom: 1.25rem;">
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Ámbito:</strong> Exclusivo Provincia de Sevilla</li>
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Enfoque:</strong> Equipos sevillanos</li>
-                </ul>
-                <a href="#" style="display: inline-block; background: #0b1a30; color: #d4af37; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; width: 100%;">Ver Grupos Sevillanos</a>
+                <h3 style="color: #0b1a30; font-size: 1.15rem; margin: 0.5rem 0;">Afectados por las condiciones meteorológicas</h3>
+                <p style="font-size: 0.9rem; color: #475569; line-height: 1.4; margin-bottom: 1rem;">El choque en el San Juan Bosco frente al Córdoba B tuvo que aplazarse por la fuerte tromba de agua, buscando fecha para recuperar el pulso competitivo.</p>
+                <a href="#" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Leer noticia completa &rarr;</a>
             </div>
 
-            <!-- Segunda Andaluza -->
-            <div class="card" style="border-top: 4px solid #d4af37;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3 style="color: #0b1a30; font-size: 1.25rem; margin: 0;">Segunda Andaluza</h3>
-                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">SEVILLA</span>
+            <!-- Dos Hermanas CF 1971 -->
+            <div class="card" style="border-top: 4px solid #0b1a30;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">DOS HERMANAS CF</span>
+                    <span style="font-size: 0.75rem; color: #64748b;">Tercera RFEF</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;">Toda la emoción del fútbol provincial de Sevilla en esta categoría.</p>
-                <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: #334155; margin-bottom: 1.25rem;">
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Ámbito:</strong> Provincial de Sevilla</li>
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Enfoque:</strong> Grupos y clubes locales</li>
-                </ul>
-                <a href="#" style="display: inline-block; background: #0b1a30; color: #d4af37; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; width: 100%;">Ver Fútbol Provincial</a>
+                <h3 style="color: #0b1a30; font-size: 1.15rem; margin: 0.5rem 0;">Un debut fulgurante en la categoría</h3>
+                <p style="font-size: 0.9rem; color: #475569; line-height: 1.4; margin-bottom: 1rem;">El conjunto nazareno está pisando fuerte en la zona alta del Grupo X gracias a una solidez defensiva envidiable y partidos muy solventes en casa.</p>
+                <a href="#" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Leer noticia completa &rarr;</a>
             </div>
 
-            <!-- Tercera Andaluza -->
-            <div class="card" style="border-top: 4px solid #d4af37;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3 style="color: #0b1a30; font-size: 1.25rem; margin: 0;">Tercera Andaluza</h3>
-                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">SEVILLA</span>
+            <!-- UD Tomares -->
+            <div class="card" style="border-top: 4px solid #0b1a30;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">UD TOMARES</span>
+                    <span style="font-size: 0.75rem; color: #64748b;">Tercera RFEF</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;">La base del fútbol territorial sevillano y el deporte de nuestros municipios.</p>
-                <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: #334155; margin-bottom: 1.25rem;">
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Ámbito:</strong> Territorial de Sevilla</li>
-                    <li style="padding: 4px 0; border-bottom: 1px solid #f1f5f9;"><strong>Enfoque:</strong> Todos los grupos provinciales</li>
-                </ul>
-                <a href="#" style="display: inline-block; background: #0b1a30; color: #d4af37; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; width: 100%;">Ver Base Sevillana</a>
+                <h3 style="color: #0b1a30; font-size: 1.15rem; margin: 0.5rem 0;">Trabajo táctico para consolidar el proyecto</h3>
+                <p style="font-size: 0.9rem; color: #475569; line-height: 1.4; margin-bottom: 1rem;">El cuadro aljarafeño prioriza el orden defensivo en este tramo de temporada para hacerse fuerte ante los históricos del grupo en San Sebastián.</p>
+                <a href="#" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Leer noticia completa &rarr;</a>
+            </div>
+
+            <!-- Atlético Central -->
+            <div class="card" style="border-top: 4px solid #0b1a30;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.75rem; background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold;">ATLÉTICO CENTRAL</span>
+                    <span style="font-size: 0.75rem; color: #64748b;">Tercera RFEF</span>
+                </div>
+                <h3 style="color: #0b1a30; font-size: 1.15rem; margin: 0.5rem 0;">Ambiciones firmes en el fútbol nacional</h3>
+                <p style="font-size: 0.9rem; color: #475569; line-height: 1.4; margin-bottom: 1rem;">El club sevillano continúa adaptándose con nota al ritmo de la Tercera Federación, buscando dar la campanada a domicilio frente a los gallitos del grupo.</p>
+                <a href="#" style="color: #0b1a30; font-weight: bold; font-size: 0.85rem; text-decoration: none;">Leer noticia completa &rarr;</a>
             </div>
 
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" style="margin-top: 2rem;">
         <p>El fútbol sevillano, desde dentro.</p>
     </footer>
+
+    <!-- Script para el menú desplegable -->
+    <script>
+    function toggleDropdown(event) {
+        event.stopPropagation();
+        document.getElementById("projectDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown > a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    </script>
 </body>
 </html>
