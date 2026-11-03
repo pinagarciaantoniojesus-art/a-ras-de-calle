@@ -14,13 +14,13 @@
                 <span class="logo-badge">FÚTBOL SEVILLANO</span>
                 <span class="logo-title">A RAS DE CALLE</span>
             </div>
-           <nav class="nav-links">
+          <nav class="nav-links">
     <a href="index.html">Inicio</a>
     
-    <!-- Menú desplegable: El Proyecto -->
+    <!-- Menú desplegable por clic -->
     <div class="dropdown">
-        <a href="#" style="cursor: default;">El Proyecto ▾</a>
-        <div class="dropdown-content">
+        <a href="javascript:void(0);" onclick="toggleDropdown(event)" style="cursor: pointer;">El Proyecto ▾</a>
+        <div class="dropdown-content" id="projectDropdown">
             <a href="proyecto.html">Sobre el proyecto</a>
             <a href="nosotros.html">Sobre nosotros</a>
             <a href="contacto.html">Contacto</a>
@@ -34,6 +34,27 @@
     <a href="noticias.html">Noticias</a>
     <a href="estadisticas.html">Estadísticas</a>
 </nav>
+
+<!-- Script para controlar el clic -->
+<script>
+function toggleDropdown(event) {
+    event.stopPropagation();
+    document.getElementById("projectDropdown").classList.toggle("show");
+}
+
+// Cierra el menú si se hace clic en cualquier otra parte de la pantalla
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown > a')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>
             <div class="auth-buttons">
                 <button class="btn-login">Iniciar sesión</button>
                 <button class="btn-register">Registrarse</button>
