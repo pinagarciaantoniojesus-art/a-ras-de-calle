@@ -1,0 +1,214 @@
+:root {
+    --azul-noche: #0b1a30;
+    --dorado: #d4af37;
+    --dorado-hover: #b89628;
+    --blanco: #ffffff;
+    --gris-fondo: #f4f6f9;
+    --gris-claro: #e2e8f0;
+    --texto-oscuro: #1e293b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    color: var(--texto-oscuro);
+}
+
+/* Cabecera */
+.header {
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-badge {
+    font-size: 0.7rem;
+    color: var(--dorado);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--blanco);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--dorado);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-login, .btn-register, .btn-gold {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.btn-login {
+    background: transparent;
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+}
+
+.btn-register, .btn-gold {
+    background: var(--dorado);
+    color: var(--azul-noche);
+}
+
+.btn-register:hover, .btn-gold:hover {
+    background: var(--dorado-hover);
+}
+
+/* Contenedor Principal */
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: var(--blanco);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--gris-claro);
+    padding-bottom: 0.75rem;
+}
+
+/* Sección Foro */
+.categories-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.categories-list li {
+    margin-bottom: 0.5rem;
+}
+
+.categories-list a {
+    display: flex;
+    justify-content: space-between;
+    color: var(--azul-noche);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.categories-list a.active, .categories-list a:hover {
+    background: var(--gris-claro);
+    font-weight: bold;
+}
+
+.forum-thread {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--azul-noche);
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.thread-info {
+    flex-grow: 1;
+}
+
+.thread-title {
+    color: var(--azul-noche);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.thread-meta {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.thread-stats {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Pie de página */
+.footer {
+    background: var(--azul-noche);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
