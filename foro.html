@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Encabezado / Menú Navegación -->
     <header class="header">
         <div class="nav-container">
             <div class="logo-area">
@@ -15,12 +16,23 @@
             </div>
             <nav class="nav-links">
                 <a href="index.html">Inicio</a>
+                
+                <!-- Menú desplegable por clic -->
+                <div class="dropdown">
+                    <a href="javascript:void(0);" onclick="toggleDropdown(event)" style="cursor: pointer;">El Proyecto ▾</a>
+                    <div class="dropdown-content" id="projectDropdown">
+                        <a href="proyecto.html">Sobre el proyecto</a>
+                        <a href="nosotros.html">Sobre nosotros</a>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+
                 <a href="foro.html" class="active">Foro</a>
                 <a href="equipos.html">Equipos</a>
                 <a href="competiciones.html">Competiciones</a>
                 <a href="partido.html">Resultados</a>
                 <a href="noticias.html">Noticias</a>
-                <a href="estadísticas.html">Estadísticas</a>
+                <a href="estadisticas.html">Estadísticas</a>
             </nav>
             <div class="auth-buttons">
                 <button class="btn-login">Iniciar sesión</button>
@@ -30,69 +42,114 @@
     </header>
 
     <main class="main-container">
-        <div class="content-grid">
-            <!-- Menú de Categorías -->
-            <aside class="sidebar-column">
-                <div class="card">
-                    <h3>Categorías</h3>
-                    <ul class="categories-list">
-                        <li><a href="#" class="active">Todas las categorías <span>842</span></a></li>
-                        <li><a href="#">Tercera RFEF <span>248</span></a></li>
-                        <li><a href="#">Primera Andaluza <span>176</span></a></li>
-                        <li><a href="#">Juveniles y cantera <span>93</span></a></li>
-                        <li><a href="#">Fútbol femenino <span>64</span></a></li>
-                        <li><a href="#">Preferente <span>88</span></a></li>
-                    </ul>
-                </div>
-            </aside>
-
-            <!-- Lista de Hilos/Temas -->
-            <section class="feed-column">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Foro de Debate</h2>
-                        <button class="btn-gold">+ Nuevo tema</button>
-                    </div>
-
-                    <div class="forum-thread">
-                        <div class="avatar">2</div>
-                        <div class="thread-info">
-                            <a href="#" class="thread-title">¿Qué os ha parecido el partido del Sanluqueño?</a>
-                            <span class="thread-meta">por alvar7 · Tercera RFEF</span>
-                        </div>
-                        <div class="thread-stats">
-                            <span>145 respuestas</span>
-                        </div>
-                    </div>
-
-                    <div class="forum-thread">
-                        <div class="avatar">E</div>
-                        <div class="thread-info">
-                            <a href="#" class="thread-title">El Écija puede dar la sorpresa este año</a>
-                            <span class="thread-meta">por sevillista99 · Tercera RFEF</span>
-                        </div>
-                        <div class="thread-stats">
-                            <span>89 respuestas</span>
-                        </div>
-                    </div>
-
-                    <div class="forum-thread">
-                        <div class="avatar">F</div>
-                        <div class="thread-info">
-                            <a href="#" class="thread-title">Fichaje del Sevilla C, ¿acierto o error?</a>
-                            <span class="thread-meta">por fran68 · Segunda RFEF</span>
-                        </div>
-                        <div class="thread-stats">
-                            <span>67 respuestas</span>
-                        </div>
+        <!-- Layout Central de 2 Columnas (Panel Lateral Izquierdo) -->
+        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; margin-top: 1rem;">
+            
+            <!-- Columna Izquierda: Panel de Categorías -->
+            <div>
+                <div class="card" style="padding: 1.25rem;">
+                    <h3 style="color: #0b1a30; font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Categorías</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; background: #e2e8f0; color: #0b1a30; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">
+                            <span>Todas las categorías</span>
+                            <span style="font-size: 0.85rem;">842</span>
+                        </a>
+                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                            <span>Tercera Federación</span>
+                            <span style="font-size: 0.85rem; color: #64748b;">248</span>
+                        </a>
+                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                            <span>División de Honor</span>
+                            <span style="font-size: 0.85rem; color: #64748b;">176</span>
+                        </a>
+                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                            <span>Primera Andaluza</span>
+                            <span style="font-size: 0.85rem; color: #64748b;">142</span>
+                        </a>
+                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                            <span>Segunda Andaluza</span>
+                            <span style="font-size: 0.85rem; color: #64748b;">115</span>
+                        </a>
+                        <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; color: #475569; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                            <span>Tercera Andaluza</span>
+                            <span style="font-size: 0.85rem; color: #64748b;">161</span>
+                        </a>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Columna Derecha: Foro de Debate y Lista de Hilos -->
+            <div>
+                <div class="card" style="padding: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h2 style="color: #0b1a30; font-size: 1.5rem; margin: 0;">Foro de Debate</h2>
+                        <button style="background: #d4af37; color: #0b1a30; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: bold; font-size: 0.9rem; cursor: pointer;">+ Nuevo tema</button>
+                    </div>
+
+                    <!-- Hilo 1 -->
+                    <div style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">2</div>
+                            <div>
+                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">¿Qué os ha parecido el partido del Sanluqueño?</a></h4>
+                                <span style="font-size: 0.8rem; color: #64748b;">por <strong>alvar7</strong> • Tercera RFEF</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">145 respuestas</span>
+                    </div>
+
+                    <!-- Hilo 2 -->
+                    <div style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">E</div>
+                            <div>
+                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">El Écija puede dar la sorpresa este año</a></h4>
+                                <span style="font-size: 0.8rem; color: #64748b;">por <strong>sevillista99</strong> • Tercera RFEF</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">89 respuestas</span>
+                    </div>
+
+                    <!-- Hilo 3 -->
+                    <div style="padding: 1rem 0; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; background: #0b1a30; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">F</div>
+                            <div>
+                                <h4 style="margin: 0 0 0.2rem 0; font-size: 1.05rem;"><a href="#" style="color: #0b1a30; text-decoration: none;">Fichaje del Sevilla C, ¿acierto o error?</a></h4>
+                                <span style="font-size: 0.8rem; color: #64748b;">por <strong>fran68</strong> • Segunda RFEF</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #64748b; white-space: nowrap;">67 respuestas</span>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" style="margin-top: 2rem;">
         <p>El fútbol sevillano, desde dentro.</p>
     </footer>
+
+    <!-- Script para el menú desplegable -->
+    <script>
+    function toggleDropdown(event) {
+        event.stopPropagation();
+        document.getElementById("projectDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown > a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    </script>
 </body>
 </html>
