@@ -42,20 +42,16 @@
     </header>
 
     <main class="main-container">
-        <!-- Banner Principal Azul -->
-        <div class="hero-card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-            <div style="max-width: 60%;">
-                <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">Portal Oficial</span>
-                <h1 style="font-size: 2.2rem; margin: 0.5rem 0; color: #ffffff;">El fútbol sevillano, desde dentro</h1>
-                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1.5rem;">Sigue a tu equipo, debate en la comunidad y mantente al día con todas las categorías de la provincia de Sevilla.</p>
+        <!-- Banner Principal Azul (Sin la caja de 3ª RFEF) -->
+        <div class="hero-card" style="background: linear-gradient(135deg, #0b1a30 0%, #1e293b 100%); color: #ffffff; padding: 2.5rem 2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+            <div style="max-width: 800px;">
+                <span style="color: #d4af37; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">PORTAL OFICIAL</span>
+                <h1 style="font-size: 2.3rem; margin: 0.5rem 0 0.8rem 0; color: #ffffff;">El fútbol sevillano, desde dentro</h1>
+                <p style="font-size: 1rem; color: #cbd5e1; margin-bottom: 1.5rem; line-height: 1.5;">Sigue a tu equipo, debate en la comunidad y mantente al día con todas las categorías de la provincia de Sevilla.</p>
                 <div style="display: flex; gap: 1rem;">
-                    <a href="foro.html" style="background: #d4af37; color: #0b1a30; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.9rem;">Ir al foro</a>
-                    <a href="partido.html" style="background: rgba(255,255,255,0.1); color: #ffffff; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2);">Ver partidos</a>
+                    <a href="foro.html" style="background: #d4af37; color: #0b1a30; padding: 0.65rem 1.3rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.9rem;">Ir al foro</a>
+                    <a href="partido.html" style="background: rgba(255,255,255,0.1); color: #ffffff; padding: 0.65rem 1.3rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2);">Ver partidos</a>
                 </div>
-            </div>
-            <div style="background: rgba(212,175,55,0.1); border: 1px dashed #d4af37; padding: 1.5rem; border-radius: 8px; text-align: center; width: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <span style="font-size: 2.5rem; font-weight: bold; color: #d4af37;">3ª RFEF</span>
-                <span style="font-size: 0.85rem; color: #ffffff; font-weight: 500;">GRUPO X (SEVILLA)</span>
             </div>
         </div>
 
@@ -77,10 +73,10 @@
         <!-- Layout Central de 2 Columnas -->
         <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
             
-            <!-- Columna Izquierda: Noticia Principal con Imagen -->
+            <!-- Columna Izquierda: Noticia Principal con nueva fotografía de fútbol modesto -->
             <div>
                 <div class="card" style="padding: 0; overflow: hidden;">
-                    <div style="background: linear-gradient(180deg, rgba(11,31,59,0.3) 0%, rgba(11,31,59,0.85) 100%), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=80') center/cover no-repeat; height: 260px; display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
+                    <div style="background: linear-gradient(180deg, rgba(11,31,59,0.2) 0%, rgba(11,31,59,0.85) 100%), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; height: 260px; display: flex; align-items: flex-end; padding: 1.5rem; position: relative;">
                         <span style="background: #d4af37; color: #0b1a30; font-size: 0.75rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; position: absolute; top: 1rem; left: 1rem;">TERCERA RFEF - JORNADA 9</span>
                     </div>
                     <div style="padding: 1.5rem;">
@@ -91,41 +87,34 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha: Escudo RFEF y Resultados Sevillanos (Jornada 9) -->
+            <!-- Columna Derecha: Resultados de los Equipos Sevillanos (Limpio de escudos rotos) -->
             <div>
-                <div class="card" style="padding: 1rem; text-align: center;">
-                    <!-- Escudo Tercera RFEF -->
-                    <div style="margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 2px solid #e2e8f0; display: flex; flex-direction: column; align-items: center;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tercera_Federaci%C3%B3n.svg/1200px-Tercera_Federaci%C3%B3n.svg.png" alt="Escudo Tercera RFEF" style="width: 70px; height: auto; margin-bottom: 0.5rem;">
-                        <h4 style="color: #0b1a30; font-size: 0.9rem; margin: 0;">TERCERA FEDERACIÓN</h4>
-                        <span style="font-size: 0.75rem; color: #d4af37; font-weight: bold;">GRUPO X - EQUIPOS SEVILLANOS</span>
-                    </div>
-
-                    <div style="background: #0b1a30; color: #d4af37; padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.8rem; margin-bottom: 0.8rem;">
+                <div class="card" style="padding: 1.25rem;">
+                    <div style="background: #0b1a30; color: #d4af37; padding: 0.6rem 0.8rem; border-radius: 4px; font-weight: bold; font-size: 0.8rem; margin-bottom: 1rem; text-align: center; letter-spacing: 0.5px;">
                         ÚLTIMOS RESULTADOS (JORNADA 9)
                     </div>
 
-                    <!-- Resultados de los equipos de Sevilla en la Jornada 9 -->
-                    <div style="font-size: 0.82rem; text-align: left;">
-                        <div style="padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                    <!-- Lista de Marcadores Sevillanos -->
+                    <div style="font-size: 0.85rem;">
+                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
                             <span style="font-weight: bold; color: #0b1a30;">Dos Hermanas - Betis C</span>
-                            <span style="background: #0b1a30; color: #d4af37; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.75rem;">4 - 3</span>
+                            <span style="background: #0b1a30; color: #d4af37; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.78rem;">4 - 3</span>
                         </div>
-                        <div style="padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 500;">Pozoblanco - Sevilla C</span>
-                            <span style="background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">2 - 2</span>
+                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 500; color: #334155;">Pozoblanco - Sevilla C</span>
+                            <span style="background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.78rem;">2 - 2</span>
                         </div>
-                        <div style="padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 500;">Tomares - Xerez D.F.C.</span>
-                            <span style="background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">0 - 1</span>
+                        <div style="padding: 0.6rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 500; color: #334155;">Tomares - Xerez D.F.C.</span>
+                            <span style="background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.78rem;">0 - 1</span>
                         </div>
-                        <div style="padding: 0.5rem 0; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="padding: 0.6rem 0; display: flex; justify-content: space-between; align-items: center;">
                             <span style="font-weight: bold; color: #0b1a30;">Utrera - Portuense</span>
-                            <span style="background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.75rem;">1 - 2</span>
+                            <span style="background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-weight: bold; color: #0b1a30; font-size: 0.78rem;">1 - 2</span>
                         </div>
                     </div>
 
-                    <a href="partido.html" style="display: block; text-align: center; margin-top: 1rem; background: #0b1a30; color: #d4af37; padding: 0.5rem; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Ver todas las jornadas</a>
+                    <a href="partido.html" style="display: block; text-align: center; margin-top: 1.2rem; background: #0b1a30; color: #d4af37; padding: 0.6rem; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: bold;">Ver todas las jornadas</a>
                 </div>
             </div>
 
